@@ -9,7 +9,7 @@ public class TMAIS {
     public static void main(String[] args) throws IOException {
 
         //Criar URL
-        URL url = new URL ("https://www.google.com");
+        URL url = new URL ("https://jsonplaceholder.typicode.com/todos/1");//"https://www.google.com");
         //Ligar ao URL
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         //Definir Pedido
@@ -32,8 +32,14 @@ public class TMAIS {
         }
         in.close();
 
+        RemoteObject object = new RemoteObject(content.toString());
+
         //Escrever a resposta
-        System.out.println(content.toString());
+        //System.out.println(content.toString());
+        System.out.println("userID: " + object.getUserID());
+        System.out.println("id: " + object.getID());
+        System.out.println("title: " + object.getTitle());
+        System.out.println("completed: " + object.getComleted());
 
         //Desligar a Ligação
         con.disconnect();
