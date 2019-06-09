@@ -13,12 +13,12 @@ public class RemoteObject {
 
     public Boolean getComleted(){ return completed; }
 
-    public RemoteObject (int userID, int id, String title, Boolean completed){
+    /*public RemoteObject (int userID, int id, String title, Boolean completed){
         this.userID = userID;
         this.id = id;
         this.title = title;
         this.completed = completed;
-    }
+    }*/
 
     public RemoteObject(String string){
 
